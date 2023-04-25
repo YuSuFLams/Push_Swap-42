@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 13:46:05 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/25 14:04:34 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,13 @@ void	ft_putstr(char *s);
 size_t	ft_strlen(const char *s);
 char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+void	freesplit(char **s, int i);
+int		count(char const *s, char c);
 
 //movement_push
 void	push_num(t_list **src, t_list **dest);
 void	pa(t_list **stack_a, t_list **stack_b);
-void	pa(t_list **stack_b, t_list **stack_a);
+void	pb(t_list **stack_b, t_list **stack_a);
 
 //movement_swap
 void	ss(t_list **src, t_list **dest);

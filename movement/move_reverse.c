@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 18:03:45 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 13:34:02 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/25 14:01:32 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	reverse_num(t_list **lst)
 
 	if (ft_lstsize(*lst) <= 1)
 		return ;
-	reverse = ft_lstlast(lst);
 	tmp = *lst;
+	reverse = ft_lstlast(tmp);
 	while (tmp->next->next)
 		tmp = tmp->next;
 	tmp->next = NULL;
