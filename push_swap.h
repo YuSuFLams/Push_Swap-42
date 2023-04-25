@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 16:25:45 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/25 16:27:51 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	freesplit(char **s, int i);
 int		count(char const *s, char c);
+void	ft_error(void);
 
 //movement_push
 void	push_num(t_list **src, t_list **dest);

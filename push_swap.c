@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:39 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 16:25:51 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/25 16:28:00 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(int ac, char **str)
     if (ac > 1)
     {
         if (!test_arg(str, ac))
-            ;
+            ft_error();
     }
     return (0);
 }

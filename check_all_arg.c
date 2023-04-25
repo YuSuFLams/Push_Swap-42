@@ -6,11 +6,16 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:33:50 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 16:11:55 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/25 16:27:40 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void ft_error(void)
+{
+    ft_putstr("Error\n");
+}
 
 bool    test_arg(char **s, int ac)
 {
