@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   check_all_arg.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/23 15:15:39 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 18:05:41 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/04/25 15:33:50 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/04/25 18:13:35 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../push_swap.h"
 
-bool test_integer(t_list *stack_a)
+void ft_error(void)
 {
-
-    while (stack_a->next && stack_a)
-    {
-        if (stack_a->content > stack_a->next->content)
-            return (false);
-        else
-            stack_a = stack_a->next;
-    }
-    return (true);
+    ft_putstr("Error\n");
+    exit(-1);
 }
 
-int main(int ac, char **str)
+bool    test_arg(char **s, int ac)
 {
-    if (ac > 1)
+    int i;
+    int j;
+    
+    i = 1;
+    while (i < ac)
     {
-        if (!test_arg(str, ac))
-            ft_error();
-        ft_parser(str, ac);
+        j = 0;
+        while (s[i][j])
+        {
+            if (!((s[i][j] >= '0' && s[i][j] <= '9') || s[i][j] == ' '))
+                return (false);
+            j++;
+        }
+        i++;
     }
-    return (0);
+    return (true);
 }

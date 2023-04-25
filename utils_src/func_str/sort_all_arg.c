@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_all_arg.c                                    :+:      :+:    :+:   */
+/*   sort_all_arg.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 15:33:50 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 16:27:40 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/04/25 17:39:03 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/04/25 17:47:18 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../push_swap.h"
 
-void ft_error(void)
+char *ft_strjoin_all(char **str, int ac)
 {
-    ft_putstr("Error\n");
-}
-
-bool    test_arg(char **s, int ac)
-{
+    char *s;
     int i;
-    int j;
-    
-    i = 1;
+
+    s = str[1];
+    i = 2;
     while (i < ac)
     {
-        j = 0;
-        while (s[i][j])
-        {
-            if (!((s[i][j] >= '0' && s[i][j] <= '9') || s[i][j] == ' '))
-                return (false);
-            j++;
-        }
+        s = ft_strjoin(s, str[i]);
         i++;
     }
-    return (true);
+    return (s);
 }
