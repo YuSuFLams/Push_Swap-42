@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   check_all_arg.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/23 15:15:39 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 16:25:51 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/04/25 15:33:50 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/04/25 16:11:55 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool test_integer(t_list *stack_a)
+bool    test_arg(char **s, int ac)
 {
-
-    while (stack_a->next && stack_a)
+    int i;
+    int j;
+    
+    i = 1;
+    while (i < ac)
     {
-        if (stack_a->content > stack_a->next->content)
-            return (false);
-        else
-            stack_a = stack_a->next;
+        j = 0;
+        while (s[i][j])
+        {
+            if (!((s[i][j] >= '0' && s[i][j] <= '9') || s[i][j] == ' '))
+                return (false);
+            j++;
+        }
+        i++;
     }
     return (true);
-}
-
-int main(int ac, char **str)
-{
-    if (ac > 1)
-    {
-        if (!test_arg(str, ac))
-            ;
-    }
-    return (0);
 }

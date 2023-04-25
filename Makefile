@@ -14,7 +14,7 @@ SRCS = movement/move_push.c movement/move_reverse.c movement/move_rotate.c movem
 	utils_src/func_lst/ft_lstsize.c \
 	utils_src/func_str/ft_putstr.c utils_src/func_str/ft_split.c utils_src/func_str/ft_strlen.c \
 	utils_src/func_str/ft_substr.c \
-	push_swap.c
+	push_swap.c check_all_arg.c
  
 OBJS = ${SRCS:.c=.o}
 

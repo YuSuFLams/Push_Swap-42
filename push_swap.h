@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 14:04:34 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/25 16:25:45 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-//push_swap fonction
+//push_swap_fonction
 bool	test_integer(t_list *stack_a);
+bool    test_arg(char **s, int ac);
 
 //src_libft
 int		ft_lstsize(t_list *lst);

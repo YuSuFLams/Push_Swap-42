@@ -6,11 +6,16 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 12:40:53 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 13:33:37 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/25 15:12:59 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+int get_min_num(t_list *list)
+{
+    
+}
 
 void sort_5(t_list **src, t_list **dest)
 {
