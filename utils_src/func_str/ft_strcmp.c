@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_perser.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 17:54:52 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/26 15:57:30 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/04/26 13:14:54 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/04/26 14:23:08 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-t_list	*ft_parser(char **str, int ac)
+int    ft_strcmp(char *s1, char *s2)
 {
-    char *s;
-    char **split;
+    int i;
+    int j;
 
-    s = ft_strjoin_all(str, ac);
-    split = ft_split(s, ' ');
+    i = 0;
+    j = 0;
+    if (*(s1 + i) == '+')
+        i++;
+    if (*(s2 + j) == '+')
+        j++;
+    while ((*(s1 + i) || *(s2 + j)) && *(s1 + i) == *(s2 + j))
+    {
+        i++;
+        j++;
+    }
+    return (*(s1 + i) - *(s2 + j));
 }

@@ -14,6 +14,7 @@ SRCS = movement/move_push.c movement/move_reverse.c movement/move_rotate.c movem
 	utils_src/func_lst/ft_lstsize.c \
 	utils_src/func_str/ft_putstr.c utils_src/func_str/ft_split.c utils_src/func_str/ft_strlen.c \
 	utils_src/func_str/ft_substr.c utils_src/func_str/sort_all_arg.c utils_src/func_str/ft_strjoin.c \
+	utils_src/func_str/ft_strcmp.c \
 	utils_src/parsing/check_all_arg.c utils_src/parsing/ft_perser.c \
 	push_swap.c 
  
