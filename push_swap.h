@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/26 15:09:07 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:51:39 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdbool.h>
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -35,6 +36,7 @@ void	ft_putchar(char c);
 void	ft_putstr(char *s);
 size_t	ft_strlen(const char *s);
 int		ft_strcmp(char *s1, char *s2);
+int		ft_atoi(const char *str);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	freesplit(char **s, int i);
@@ -49,6 +51,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_error(void);
 void    test_arg(char **s, int ac);
 void	check_duplicate(char **str, int ac);
+void	check_arg_min_max(char **str, int ac);
 
 //movement_push
 void	push_num(t_list **src, t_list **dest);

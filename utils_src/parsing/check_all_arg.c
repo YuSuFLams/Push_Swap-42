@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:33:50 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/26 13:51:03 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:02:27 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,22 @@ void check_duplicate(char **str, int ac)
             j++;
         }
         i++;
+    }
+}
+
+void    check_arg_min_max(char **str, int ac)
+{
+    char    **split;
+    char    *s;
+    int    tmp;
+    int     i;
+        
+    s = ft_strjoin_all(str, ac);
+    split = ft_split(s, ' ');
+    i = -1;
+    while (++i < count(s, ' '))
+    {
+        tmp = ft_atoi(split[i]);
+        printf("%d\n", tmp);
     }
 }
