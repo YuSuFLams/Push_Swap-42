@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 17:59:40 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 13:33:53 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/28 14:38:30 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	swap_num(t_list **lst)
 {
-	t_list *swap;
+	int	swap;
 
 	if (ft_lstsize(*lst) <= 1)
 		return ;

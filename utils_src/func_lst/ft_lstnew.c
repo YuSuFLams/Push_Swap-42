@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_5_num.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 12:40:53 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/28 14:33:32 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/04/28 14:23:24 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/04/28 14:35:45 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-int get_min_num(t_list *list);
-// {
-    
-// }
+t_list *ft_lstnew(int content)
+{
+    t_list *s;
 
-void sort_5(t_list **src, t_list **dest);
-// {
-    
-// }
+    s = (t_list *)malloc(sizeof(t_list));
+    if (!s)
+        return (NULL);
+    s->content = content;
+    s->next = NULL;
+    return (s);
+}

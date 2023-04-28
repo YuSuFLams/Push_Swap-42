@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/27 15:51:39 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/28 14:37:28 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 typedef struct s_list
 {
-	void 			*content;
+	int 			content;
 	struct s_list	*next;
 }	t_list;
 
@@ -44,6 +44,7 @@ int		count(char const *s, char c);
 char	**ft_split(char const *s, char c);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstnew(int	content);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 

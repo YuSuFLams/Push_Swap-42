@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:54:52 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/27 16:10:02 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/04/28 14:51:58 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,20 @@
 
 t_list	*ft_parser(char **str, int ac)
 {
-    char *s;
-    char **split;
+    int     i;
+    int     n;
+    char    *s;
+    char    **split;
+    t_list  *data;
 
     s = ft_strjoin_all(str, ac);
     split = ft_split(s, ' ');
+    data = NULL;
+    i = -1;
+    while (++i < count(s, ' '))
+    {
+        n = ft_atoi(split[i]);
+        ft_lstadd_back(&data, ft_lstnew(n));
+    }
+    return (data);
 }
