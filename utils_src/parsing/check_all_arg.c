@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:33:50 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/28 13:13:35 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/01 18:16:01 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,6 @@ void ft_error(void)
 {
     ft_putstr("Error\n");
     exit(-1);
-}
-
-void    test_arg(char **s, int ac)
-{
-    int i;
-    int j;
-    
-    i = 1;
-    while (i < ac)
-    {
-        j = 0;
-        while (s[i][j])
-        {
-            if ((s[i][j] == '+' || s[i][j] == '-') && s[i][j + 1])
-                j++;
-            if (!((s[i][j] >= '0' && s[i][j] <= '9') || s[i][j] == ' '))
-                ft_error();
-            j++;
-        }
-        i++;
-    }
 }
 
 void check_duplicate(char **str, int ac)
@@ -62,15 +41,38 @@ void check_duplicate(char **str, int ac)
     }
 }
 
+void    test_char(char *s)
+{
+    int i;
+
+    i = 0;
+    if ((*s == '-' || *s == '+'))
+    {
+        if (!
+        s[1])
+            ft_error();
+        else
+            i++;
+    }
+    while (*(s + i))
+    {
+        if (*(s + i) < '0' || *(s + i) > '9')
+            ft_error();
+        i++;
+    }
+}
+
 void    check_arg_min_max(char **str, int ac)
 {
     char    **split;
     char    *s;
     int     i;
-        
     s = ft_strjoin_all(str, ac);
     split = ft_split(s, ' ');
     i = -1;
     while (++i < count(s, ' '))
+    {
+        test_char(split[i]);
         ft_atoi(split[i]);
+    }
 }

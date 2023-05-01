@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 12:08:59 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 13:33:44 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/01 15:59:42 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,25 @@
 
 void sort_3(t_list **src)
 {
-	t_list *tmp;
-	t_list *tmp_1;
-	t_list *tmp_2;
+	int	tmp;
+	int	tmp_1;
+	int	tmp_2;
 	
-	tmp = (*src);
-	tmp_1 = tmp->next;
-	tmp_2 = tmp_1->next;
-	if (tmp->content > tmp_1->content && tmp->content < tmp_2->content)
+	tmp = (*src)->content;
+	tmp_1 = (*src)->next->content;
+	tmp_2 = (*src)->next->next->content;
+	if (tmp > tmp_1 && tmp < tmp_2)
 		sa(src);
-	else if (tmp->content > tmp_1->content && tmp_1->content > tmp_2->content)
+	else if (tmp > tmp_1 && tmp_1 > tmp_2)
 	{
 		sa(src);
 		rra(src);
 	}
-	else if (tmp->content < tmp_1->content && tmp->content > tmp_2->content)
+	else if (tmp < tmp_1 && tmp > tmp_2)
 		rra(src);
-	else if (tmp->content > tmp_1->content && tmp->content > tmp_2->content \
-		&& tmp_1->content < tmp_2->content)
+	else if (tmp > tmp_1 && tmp > tmp_2 && tmp_1 < tmp_2)
 		ra(src);
-	else if (tmp->content < tmp_1->content && tmp_1->content < tmp_2->content \
-		&& tmp_1->content > tmp_2->content)
+	else if (tmp < tmp_1 && tmp_1 < tmp_2 && tmp_1 > tmp_2)
 	{
 		sa(src);
 		ra(src);

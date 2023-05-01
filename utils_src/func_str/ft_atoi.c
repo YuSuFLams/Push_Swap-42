@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 13:39:54 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/27 14:08:41 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/01 17:15:08 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int	ft_atoi(const char *str)
     {
         n = n * 10 + *str - '0';
         str++;
-    }
+    }  
     if (n * sign < INT_MIN || n * sign > INT_MAX)
-            ft_error();
+        ft_error();
     return ((int )n * sign);
 }

@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:39 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/28 15:39:03 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/01 19:48:10 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 bool test_integer(t_list *stack_a)
 {
-    if (stack_a)
+    while (stack_a->next)
     {
-        while (stack_a->next)
-        {
-            if (stack_a->content > stack_a->next->content)
-                return (false);
-            else
-                stack_a = stack_a->next;
-        }
+        if (stack_a->content > stack_a->next->content)
+            return (false);
+        else
+            stack_a = stack_a->next;
     }
     return (true);
 }
@@ -34,11 +31,10 @@ int main(int ac, char **str)
 
     if (ac > 1)
     {
-        test_arg(str, ac);    
         check_duplicate(str, ac);
         check_arg_min_max(str, ac);
         stack_a = NULL;
-        stack_a = ft_parser(str, ac);
+        stack_a = ft_perser(str, ac);
         if (!test_integer(stack_a))
         {
             if (ft_lstsize(stack_a) == 2)
@@ -46,7 +42,7 @@ int main(int ac, char **str)
             else if (ft_lstsize(stack_a) == 3)
                 sort_3(&stack_a);
             // else if (ft_lstsize(stack_a) <= 5)
-            //     sort_5(&stack_a, &stack_b);
+            //     sort_4_5(&stack_a, &stack_b);
             // else if (ft_lstsize(stack_a) > 5)
             //     sort_x(&stack_a);
         }

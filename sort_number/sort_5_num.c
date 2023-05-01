@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 12:40:53 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/28 14:33:32 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/01 18:28:22 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int get_min_num(t_list *list);
     
 // }
 
-void sort_5(t_list **src, t_list **dest);
+void sort_4_5(t_list **src, t_list **dest);
 // {
     
 // }
