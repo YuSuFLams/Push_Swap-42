@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/01 18:41:33 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/02 17:49:07 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ typedef struct s_list
 
 //push_swap_fonction
 bool	test_integer(t_list *stack_a);
-char	*ft_strjoin_all(char **str, int ac);
-t_list	*ft_perser(char **str, int ac);
+char	*ft_strjoin_all(char **str);
+t_list	*ft_perser(char **str);
 
 //src_libft
 void	ft_putchar(char c);
@@ -51,8 +51,8 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 //check_error
 void	ft_error(void);
 void    test_char(char *s);
-void	check_duplicate(char **str, int ac);
-void	check_arg_min_max(char **str, int ac);
+void	check_duplicate(char **str);
+void	check_arg_min_max(char **str);
 
 //movement_push
 void	push_num(t_list **src, t_list **dest);

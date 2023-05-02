@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:33:50 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/01 18:16:01 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/02 18:07:57 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ void ft_error(void)
     exit(-1);
 }
 
-void check_duplicate(char **str, int ac)
+void check_duplicate(char **str)
 {
     char    **split;
     char    *s;
     int     i;
     int     j;
     
-    s = ft_strjoin_all(str, ac);
+    s = ft_strjoin_all(str);
     split = ft_split(s, ' ');
     i = 0;
     while (i < count(s, ' ') - 1)
@@ -48,26 +48,22 @@ void    test_char(char *s)
     i = 0;
     if ((*s == '-' || *s == '+'))
     {
-        if (!
-        s[1])
+        if (!s[1])
             ft_error();
         else
             i++;
     }
-    while (*(s + i))
-    {
+    while (*(s + (i++)))
         if (*(s + i) < '0' || *(s + i) > '9')
             ft_error();
-        i++;
-    }
 }
 
-void    check_arg_min_max(char **str, int ac)
+void    check_arg_min_max(char **str)
 {
     char    **split;
     char    *s;
     int     i;
-    s = ft_strjoin_all(str, ac);
+    s = ft_strjoin_all(str);
     split = ft_split(s, ' ');
     i = -1;
     while (++i < count(s, ' '))

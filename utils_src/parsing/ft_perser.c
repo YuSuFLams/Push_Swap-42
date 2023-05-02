@@ -6,20 +6,20 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:54:52 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/01 19:43:36 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/02 17:50:05 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-t_list	*ft_perser(char **str, int ac)
+t_list	*ft_perser(char **str)
 {
     int     i;
     char    *s;
     char    **split;
     t_list  *data;
 
-    s = ft_strjoin_all(str, ac);
+    s = ft_strjoin_all(str);
     split = ft_split(s, ' ');
     data = NULL;
     i = -1;
