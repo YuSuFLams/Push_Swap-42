@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:33:50 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/02 18:07:57 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/02 19:53:56 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,12 @@ void    test_char(char *s)
         else
             i++;
     }
-    while (*(s + (i++)))
+    while (*(s + i))
+    {
         if (*(s + i) < '0' || *(s + i) > '9')
             ft_error();
+        i++;
+    }
 }
 
 void    check_arg_min_max(char **str)
