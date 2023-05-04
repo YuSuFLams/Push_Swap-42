@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/02 17:49:07 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/04 22:04:56 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,37 +22,41 @@
 typedef struct s_list
 {
 	int 			content;
+	int 			pos;
 	struct s_list	*next;
 }				t_list;
 
-
-//push_swap_fonction
-bool	test_integer(t_list *stack_a);
-char	*ft_strjoin_all(char **str);
-t_list	*ft_perser(char **str);
-
 //src_libft
+int		ft_atoi(const char *str);
+size_t	ft_strlen(const char *s);
 void	ft_putchar(char c);
 void	ft_putstr(char *s);
-size_t	ft_strlen(const char *s);
-int		ft_strcmp(char *s1, char *s2);
-int		ft_atoi(const char *str);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+int		ft_isdigit(int c);
+char	*ft_strdup(const char *s);
 void	freesplit(char **s, int i);
 int		count(char const *s, char c);
 char	**ft_split(char const *s, char c);
-int		ft_lstsize(t_list *lst);
+int		ft_strcmp(char *s1, char *s2);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(int	content);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+
+//push_swap_fonction
+void	check_duplicate(char **s, int ac);
+int 	is_num(char *s);
+void	check_number(char **str, int ac);
+char	*strjoin_all_arg(char **str, int ac);
+char	**split_all_arg(char **str, int ac);
+void	int_min_max(char **str, int ac);
+int 	set_size_arg(char **s);
+void    push_stack(t_list **stack_a, char **s);
+bool	test_integer(t_list *stack_a);
 
 //check_error
 void	ft_error(void);
-void    test_char(char *s);
-void	check_duplicate(char **str);
-void	check_arg_min_max(char **str);
 
 //movement_push
 void	push_num(t_list **src, t_list **dest);
@@ -77,9 +81,11 @@ void	rrb(t_list **dest);
 void	rra(t_list **src);
 void	reverse_num(t_list **lst);
 
+// ......................................................................
+
 //move_sort
-void	sort_2(t_list **src);
-void	sort_3(t_list **src);
+// void	sort_2(t_list **src);
+// void	sort_3(t_list **src);
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:38:37 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 17:51:06 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/04 17:13:12 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = -1;
 	while (++i < s_sec + s_fst && s1[i])
 		str[i] = s1[i];
-    str[i++] = ' ';
 	j = -1;
 	while (++j < s_sec + s_fst && s2[j])
 		str[i + j] = s2[j];

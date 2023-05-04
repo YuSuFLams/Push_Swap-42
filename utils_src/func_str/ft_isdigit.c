@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_5_num.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 12:40:53 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/01 18:28:22 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/03 23:50:02 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/04 00:11:57 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-int get_min_num(t_list *list);
-// {
-    
-// }
-
-void sort_4_5(t_list **src, t_list **dest);
-// {
-    
-// }
+int	ft_isdigit(int c)
+{
+	return (c >= '0' && c <= '9');
+}

@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_2_num.c                                       :+:      :+:    :+:   */
+/*   set_size_arg.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 11:58:57 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/28 15:06:15 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/04 19:00:01 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/04 21:09:05 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-void sort_2(t_list **src)
+int set_size_arg(char **s)
 {
-    t_list *num;
+	int	i;
 
-    num = *src;
-    if (num->content > num->next->content)
-        sa(src);
+	i = 0;
+	while (*(s + i))
+		i++;
+	return (i);
 }

@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_perser.c                                        :+:      :+:    :+:   */
+/*   check_duplicate.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 17:54:52 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/02 17:50:05 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/04 02:16:01 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/04 21:32:08 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-t_list	*ft_perser(char **str)
+void    check_duplicate(char **s, int ac)
 {
-    int     i;
-    char    *s;
-    char    **split;
-    t_list  *data;
+    int i;
+    int j;
 
-    s = ft_strjoin_all(str);
-    split = ft_split(s, ' ');
-    data = NULL;
     i = -1;
-    while (++i < count(s, ' '))
-        ft_lstadd_back(&data, ft_lstnew(ft_atoi(split[i])));
-    return (data);
+    while ((++i) < ac - 1)
+    {
+        j = i + 1;
+        while (j < ac)
+        {
+            if (ft_atoi(s[i]) == ft_atoi(s[j]))
+                ft_error();
+            j++;
+        }
+    }
 }

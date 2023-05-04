@@ -1,25 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_all_arg.c                                     :+:      :+:    :+:   */
+/*   check_number.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 17:39:03 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/02 17:48:34 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/04 02:45:02 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/04 21:34:07 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-char *ft_strjoin_all(char **str)
+int is_num(char *s)
 {
-    char *s;
     int i;
 
-    s = str[1];
-    i = 1;
-    while (str[++i])
-        s = ft_strjoin(s, str[i]);
-    return (s);
+    i = 0;
+    if ((s[0] == '-' || s[0] == '+') && !s[1])
+        return (0);
+    if (s[0] == '-' || s[0] == '+')
+        i++;
+    while (s[i])
+    {
+        if (!ft_isdigit(s[i]))
+            return (0);
+        i++;
+    }
+    return (1);
+}
+
+void    check_number(char **str, int ac)
+{
+    int i;
+
+    i = 0;
+    while (i < ac)
+    {
+        if (!str[i][0] || !is_num(str[i]))
+            ft_error();
+        i++;
+    }
 }

@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/23 18:28:37 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/04 00:18:30 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/04 01:06:19 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/04 01:07:50 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int	ft_lstsize(t_list *lst)
+char	*ft_strdup(const char *s)
 {
-	int i;
+	char	*str;
+	size_t	i;
 
-	i = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
+	str = (char *)malloc(ft_strlen(s) + 1 * sizeof(char ));
+	if (!str)
+		return (str);
+	i = -1;
+	while (*(s + (++i)))
+		*(str + i) = *(s + i);
+	*(str + i) = '\0';
+	return (str);
 }
