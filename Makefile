@@ -27,7 +27,7 @@ SRCS = movement/move_push.c movement/move_reverse.c movement/move_rotate.c movem
 OBJS = ${SRCS:.c=.o}
 
 all: $(NAME)
-	@printf "$(C_BLUE)   - Compilation finished!....$(C_RESET)\n"
+	@printf "$(C_BLUE)    - Compilation finished!....$(C_RESET)\n"
 
 $(NAME): $(OBJS) $(HEADER)
 	@$(CC) $(CFLAGS)  $(OBJS) -o $(NAME)  
@@ -40,6 +40,7 @@ clean:
 
 fclean: clean
 	@$(RM)  $(NAME)
+	@printf "$(C_GREEN)    - Removed finished!....$(C_RESET)\n"
 
 re: fclean all
 

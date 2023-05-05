@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 20:19:42 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/05 20:28:25 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/05 22:59:03 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void sort_5(t_list **src, t_list **dest)
     int pos_min;
 
 	pos_min = get_min_num(*src);;
-	while (ft_lstsize(*src) > 4)
+	while (ft_lstsize(*src) > 3)
 	{
 		if (test_integer(*src) && (!*dest))
 			return ;
@@ -29,7 +29,7 @@ void sort_5(t_list **src, t_list **dest)
 			rra(src);
 		pos_min = get_min_num(*src);
 	}
-	sort_4(src, dest);
+	sort_3(src);
 	while (*dest)
 		pa(dest, src);
 }
