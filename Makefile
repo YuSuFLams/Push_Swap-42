@@ -15,7 +15,8 @@ SRCS = movement/move_push.c movement/move_reverse.c movement/move_rotate.c movem
 	utils_src/func_str/ft_substr.c  utils_src/func_str/ft_strjoin.c utils_src/func_str/ft_strdup.c \
 	utils_src/func_str/ft_strcmp.c utils_src/func_str/ft_isdigit.c utils_src/func_str/ft_atoi.c \
 	utils_src/parsing/check_duplicate.c utils_src/parsing/ft_error.c utils_src/parsing/check_number.c \
-	utils_src/parsing/split_all_arg.c utils_src/parsing/set_size_arg.c utils_src/parsing/push_stack.c\
+	utils_src/parsing/split_all_arg.c utils_src/parsing/set_size_arg.c utils_src/parsing/push_stack.c \
+	sort_number/sort_2_num.c sort_number/sort_3_num.c \
 	push_swap.c 
  
 OBJS = ${SRCS:.c=.o}

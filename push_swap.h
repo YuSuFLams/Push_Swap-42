@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/04 22:04:56 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/05 00:52:29 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,11 +81,9 @@ void	rrb(t_list **dest);
 void	rra(t_list **src);
 void	reverse_num(t_list **lst);
 
-// ......................................................................
-
 //move_sort
-// void	sort_2(t_list **src);
-// void	sort_3(t_list **src);
+void	sort_2(t_list **src);
+void	sort_3(t_list **src);
 
 
 #endif

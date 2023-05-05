@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   sort_2_num.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/23 15:15:39 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/05 01:09:22 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/04/25 11:58:57 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/04/28 15:06:15 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int main(int ac, char **str)
+void sort_2(t_list **src)
 {
-    t_list *stack_a;
-    // t_list *stack_b;
-    char **s;
+    t_list *num;
 
-    if (ac > 1)
-    {
-        int_min_max(str + 1, ac - 1);
-        s = split_all_arg(str + 1, ac - 1);
-        push_stack(&stack_a, s);
-        if (ft_lstsize(stack_a) == 2)
-            sort_2(&stack_a);
-        if (ft_lstsize(stack_a) == 3)
-            sort_3(&stack_a);
-    }
-    return (0);
+    num = *src;
+    if (num->content > num->next->content)
+        sa(src);
 }
