@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:39 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/05 20:22:22 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/05 21:20:37 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int main(int ac, char **str)
             sort_4(&stack_a, &stack_b);
         else if (ft_lstsize(stack_a) == 5)
             sort_5(&stack_a, &stack_b);
+        free_all_stack(stack_a);
     }
     return (0);
 }

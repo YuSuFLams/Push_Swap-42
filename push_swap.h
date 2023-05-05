@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/05 20:20:09 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/05 21:06:43 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ bool	test_integer(t_list *stack_a);
 int 	get_min_num(t_list *list);
 
 //check_error
+void	free_all_stack(t_list *stack);
 void	ft_error(void);
 
 //movement_push
