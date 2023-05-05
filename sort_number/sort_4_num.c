@@ -1,23 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_5_num.c                                       :+:      :+:    :+:   */
+/*   sort_4_num.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 20:19:42 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/05 20:28:25 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/04/25 12:40:53 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/05 20:12:29 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void sort_5(t_list **src, t_list **dest)
+int	get_min_num(t_list *list)
+{
+	int min;
+	int i;
+	int pos;
+
+	min = list->content;
+	i = 0;
+	pos = 0;
+	while (list)
+	{
+		if (list->content < min)
+		{
+			pos = i;
+			min = list->content;
+		}
+		i++;
+		list = list->next;
+	}
+	return (pos);
+}
+
+void sort_4(t_list **src, t_list **dest)
 {
     int pos_min;
 
 	pos_min = get_min_num(*src);;
-	while (ft_lstsize(*src) > 4)
+	while (ft_lstsize(*src) > 3)
 	{
 		if (test_integer(*src) && (!*dest))
 			return ;
@@ -29,7 +51,7 @@ void sort_5(t_list **src, t_list **dest)
 			rra(src);
 		pos_min = get_min_num(*src);
 	}
-	sort_4(src, dest);
+	sort_3(src);
 	while (*dest)
 		pa(dest, src);
 }

@@ -6,17 +6,17 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 11:58:57 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/28 15:06:15 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/05 19:02:24 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void sort_2(t_list **src)
+void	sort_2(t_list **src)
 {
-    t_list *num;
+	t_list *num;
 
-    num = *src;
-    if (num->content > num->next->content)
-        sa(src);
+	num = *src;
+	if (num->content > num->next->content)
+		sa(src);
 }

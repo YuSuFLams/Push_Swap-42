@@ -1,5 +1,9 @@
 NAME = push_swap
 
+C_BLUE    = \033[0;34m
+C_GREEN   = \033[0;32m
+C_RESET = \033[0m
+
 CC = cc
 
 RM = rm -rf
@@ -16,12 +20,13 @@ SRCS = movement/move_push.c movement/move_reverse.c movement/move_rotate.c movem
 	utils_src/func_str/ft_strcmp.c utils_src/func_str/ft_isdigit.c utils_src/func_str/ft_atoi.c \
 	utils_src/parsing/check_duplicate.c utils_src/parsing/ft_error.c utils_src/parsing/check_number.c \
 	utils_src/parsing/split_all_arg.c utils_src/parsing/set_size_arg.c utils_src/parsing/push_stack.c \
-	sort_number/sort_2_num.c sort_number/sort_3_num.c \
+	sort_number/sort_2_num.c sort_number/sort_3_num.c sort_number/sort_4_num.c sort_number/sort_5_num.c\
 	push_swap.c 
  
 OBJS = ${SRCS:.c=.o}
 
 all: $(NAME)
+	@printf "$(C_BLUE)   - Compilation finished!....$(C_RESET)\n"
 
 $(NAME): $(OBJS) $(HEADER)
 	@$(CC) $(CFLAGS)  $(OBJS) -o $(NAME)  

@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/05 00:52:29 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/05 20:20:09 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	int_min_max(char **str, int ac);
 int 	set_size_arg(char **s);
 void    push_stack(t_list **stack_a, char **s);
 bool	test_integer(t_list *stack_a);
+int 	get_min_num(t_list *list);
 
 //check_error
 void	ft_error(void);
@@ -84,6 +85,7 @@ void	reverse_num(t_list **lst);
 //move_sort
 void	sort_2(t_list **src);
 void	sort_3(t_list **src);
-
+void	sort_4(t_list **src, t_list **dest);
+void	sort_5(t_list **src, t_list **dest);
 
 #endif

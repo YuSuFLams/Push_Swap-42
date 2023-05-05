@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 17:51:20 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 13:58:53 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/05 19:34:00 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ void	push_num(t_list **src, t_list **dest)
 	ft_lstadd_front(dest, push);
 }
 
-void	pa(t_list **stack_a, t_list **stack_b)
+void	pa(t_list **stack_b, t_list **stack_a)
 {
-	push_num(stack_a, stack_b);
+	push_num(stack_b, stack_a);
 	ft_putstr("pa\n");   
 }
 
-void	pb(t_list **stack_b, t_list **stack_a)
+void	pb(t_list **stack_a, t_list **stack_b)
 {
-	push_num(stack_b, stack_a);
+	push_num(stack_a, stack_b);
 	ft_putstr("pb\n");   
 }

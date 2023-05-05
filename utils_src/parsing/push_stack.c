@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 21:10:09 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/05 00:36:19 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/05 19:22:57 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ void    push_stack(t_list **stack_a, char **s)
     check_number(s, len);
     while (len)
         ft_lstadd_front(stack_a, ft_lstnew(ft_atoi(s[--len])));
-    if (test_integer(*stack_a) == true)
+    if (test_integer(*stack_a))
         exit(EXIT_SUCCESS);
 }
