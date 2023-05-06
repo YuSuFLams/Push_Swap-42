@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/06 20:44:18 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/07 00:35:59 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ void	sort_4(t_list **src, t_list **dest);
 void	sort_5(t_list **src, t_list **dest);
 
 //Bonus
-void	test_input(t_list **src, t_list **dest, char *s);
+bool	test_input(t_list **src, t_list **dest, char *s);
 void	checker(t_list **src, t_list **dest);
 
 //movement_push_bonus
@@ -132,5 +132,6 @@ void	rrr_bonus(t_list **src, t_list **dest);
 void	rrb_bonus(t_list **dest);
 void	rra_bonus(t_list **src);
 void	reverse_num_bonus(t_list **lst);
+void	push_stack_bonus(t_list **stack_a, char **s);
 
 #endif
