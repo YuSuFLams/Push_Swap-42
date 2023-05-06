@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 18:41:26 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/06 20:39:49 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/06 23:34:32 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,12 @@ void checker(t_list **src, t_list **dest)
     s = get_next_line(0);
     while (s)
     {
-        test_input(src, dest, s);
+        if (s)
+            test_input(src, dest, s);
         free(s);
         s = get_next_line(0);
     }
     free(s);
-    if (test_integer(*src) && !(*dest))
-        ft_putstr("OK\n");
-    else
-        ft_putstr("KO\n");
 }
 
 int	main(int ac, char **str)
@@ -72,6 +69,10 @@ int	main(int ac, char **str)
 		s = split_all_arg(str + 1, ac - 1);
 		push_stack(&stack_a, s);
         checker(&stack_a, &stack_b);
+        if (test_integer(stack_a) && !(stack_b))
+            ft_putstr("OK\n");
+        else
+            ft_putstr("KO\n");
 		free_all_stack(stack_a);
 		free_data(s);
 	}
