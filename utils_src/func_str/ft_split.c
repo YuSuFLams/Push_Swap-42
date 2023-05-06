@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 10:32:19 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/04/25 14:25:18 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/06 18:13:27 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	count(char const *s, char c)
 {
-	int		i;
-	int		counter;
+	int	i;
+	int	counter;
 
 	counter = 0;
 	i = 0;

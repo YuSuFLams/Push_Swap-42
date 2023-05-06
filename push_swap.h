@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 15:15:46 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/05 21:06:43 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/06 20:44:18 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <fcntl.h>
 # include <stdbool.h>
 # include <limits.h>
 
@@ -25,6 +26,20 @@ typedef struct s_list
 	int 			pos;
 	struct s_list	*next;
 }				t_list;
+
+//src_get_next_line
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+int		get_strlen(char *s);
+char	*get_strchr(char *s, int c);
+char	*get_strjoin(char *s1, char *s2);
+char	*set_read_line(char *line);
+char	*read_line(int fd, char *line);
+char	*set_next_line(char *line);
+char	*get_next_line(int fd);
 
 //src_libft
 int		ft_atoi(const char *str);
@@ -55,9 +70,11 @@ int 	set_size_arg(char **s);
 void    push_stack(t_list **stack_a, char **s);
 bool	test_integer(t_list *stack_a);
 int 	get_min_num(t_list *list);
+t_list	*get_small_num(t_list *stack);
 
 //check_error
 void	free_all_stack(t_list *stack);
+void	free_data(char **s);
 void	ft_error(void);
 
 //movement_push
@@ -88,5 +105,32 @@ void	sort_2(t_list **src);
 void	sort_3(t_list **src);
 void	sort_4(t_list **src, t_list **dest);
 void	sort_5(t_list **src, t_list **dest);
+
+//Bonus
+void	test_input(t_list **src, t_list **dest, char *s);
+void	checker(t_list **src, t_list **dest);
+
+//movement_push_bonus
+void	push_num_bonus(t_list **src, t_list **dest);
+void	pa_bonus(t_list **stack_a, t_list **stack_b);
+void	pb_bonus(t_list **stack_b, t_list **stack_a);
+
+//movement_swap_bonus
+void	ss_bonus(t_list **src, t_list **dest);
+void	sa_bonus(t_list **src);
+void	sb_bonus(t_list **dest);
+void	swap_num_bonus(t_list **lst);
+
+//movement_rotate_bonus
+void	rr_bonus(t_list **src, t_list **dest);
+void	ra_bonus(t_list **src);
+void	rb_bonus(t_list **dest);
+void	rotate_num_bonus(t_list **lst);
+
+//movement_reverse_bonus
+void	rrr_bonus(t_list **src, t_list **dest);
+void	rrb_bonus(t_list **dest);
+void	rra_bonus(t_list **src);
+void	reverse_num_bonus(t_list **lst);
 
 #endif

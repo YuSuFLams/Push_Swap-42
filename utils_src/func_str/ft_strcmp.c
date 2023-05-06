@@ -6,18 +6,18 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 13:14:54 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/04 01:26:41 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/06 18:14:29 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int    ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while ((*(s1 + i) || *(s2 + i)) && *(s1 + i) == *(s2 + i))
-        i++;
-    return (*(s1 + i) - *(s2 + i));
+	i = 0;
+	while ((*(s1 + i) || *(s2 + i)) && *(s1 + i) == *(s2 + i))
+		i++;
+	return (*(s1 + i) - *(s2 + i));
 }

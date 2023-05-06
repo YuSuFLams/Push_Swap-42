@@ -6,35 +6,35 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 21:10:09 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/05 19:22:57 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/06 18:21:30 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-bool test_integer(t_list *stack_a)
+bool	test_integer(t_list *stack_a)
 {
-    if (!ft_lstsize(stack_a))
-        return (false);
-    while (stack_a->next)
-    {
-        if (stack_a->content > stack_a->next->content)
-            return (false);
-        else
-            stack_a = stack_a->next;
-    }
-    return (true);
+	if (!ft_lstsize(stack_a))
+		return (false);
+	while (stack_a->next)
+	{
+		if (stack_a->content > stack_a->next->content)
+			return (false);
+		else
+			stack_a = stack_a->next;
+	}
+	return (true);
 }
 
-void    push_stack(t_list **stack_a, char **s)
-{    
-    int len;
+void	push_stack(t_list **stack_a, char **s)
+{
+	int	len;
 
-    len = set_size_arg(s);
-    check_duplicate(s, len);
-    check_number(s, len);
-    while (len)
-        ft_lstadd_front(stack_a, ft_lstnew(ft_atoi(s[--len])));
-    if (test_integer(*stack_a))
-        exit(EXIT_SUCCESS);
+	len = set_size_arg(s);
+	check_duplicate(s, len);
+	check_number(s, len);
+	while (len)
+		ft_lstadd_front(stack_a, ft_lstnew(ft_atoi(s[--len])));
+	if (test_integer(*stack_a))
+		exit(EXIT_SUCCESS);
 }

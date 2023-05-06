@@ -1,35 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_5_num.c                                       :+:      :+:    :+:   */
+/*   move_rotate_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 20:19:42 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/06 18:10:27 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/04/23 17:59:38 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/06 20:42:37 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sort_5(t_list **src, t_list **dest)
+void	rotate_num_bonus(t_list **lst)
 {
-	int	pos_min;
+	t_list *rotate;
+	t_list *tmp;
 
-	pos_min = get_min_num(*src);;
-	while (ft_lstsize(*src) > 3)
-	{
-		if (test_integer(*src) && (!*dest))
-			return ;
-		if (pos_min == 0)
-			pb(src, dest);
-		else if (pos_min <= 2)
-			ra(src);
-		else if (pos_min > 2)
-			rra(src);
-		pos_min = get_min_num(*src);
-	}
-	sort_3(src);
-	while (*dest)
-		pa(dest, src);
+	if (ft_lstsize(*lst) <= 1)
+		return ;
+	tmp = (*lst);
+	(*lst) = (*lst)->next;
+	rotate = ft_lstlast(*lst);
+	rotate->next = tmp;
+	tmp->next = NULL;
+}
+
+void	ra_bonus(t_list **src)
+{
+	rotate_num_bonus(src);
+}
+
+void	rb_bonus(t_list **dest)
+{
+	rotate_num_bonus(dest);
+}
+
+void	rr_bonus(t_list **src, t_list **dest)
+{
+	ra_bonus(src);
+	rb_bonus(dest);
 }

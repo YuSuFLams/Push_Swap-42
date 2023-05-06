@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   get_small_num.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 02:10:55 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/06 18:07:19 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/06 17:24:01 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/06 18:23:35 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "push_swap.h"
 
-void	ft_error(void)
+t_list	*get_small_num(t_list *stack)
 {
-	ft_putstr("Error\n");
-	exit(EXIT_FAILURE);
+	t_list	*min;
+
+	min = stack;
+	while (stack)
+	{
+		if (stack->content < min->content)
+			min = stack;
+		stack = stack->next;
+	}
+	return (min);
 }

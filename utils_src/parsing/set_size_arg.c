@@ -6,13 +6,13 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 19:00:01 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/04 21:09:05 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/06 18:21:43 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int set_size_arg(char **s)
+int	set_size_arg(char **s)
 {
 	int	i;
 

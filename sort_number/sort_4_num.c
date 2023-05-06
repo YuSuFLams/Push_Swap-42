@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 12:40:53 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/05 20:12:29 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/06 18:09:41 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	get_min_num(t_list *list)
 {
-	int min;
-	int i;
-	int pos;
+	int	min;
+	int	i;
+	int	pos;
 
 	min = list->content;
 	i = 0;
@@ -34,9 +34,9 @@ int	get_min_num(t_list *list)
 	return (pos);
 }
 
-void sort_4(t_list **src, t_list **dest)
+void	sort_4(t_list **src, t_list **dest)
 {
-    int pos_min;
+	int	pos_min;
 
 	pos_min = get_min_num(*src);;
 	while (ft_lstsize(*src) > 3)

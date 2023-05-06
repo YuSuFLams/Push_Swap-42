@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_all_stack.c                                   :+:      :+:    :+:   */
+/*   move_swap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 20:46:45 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/06 18:20:35 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/04/23 17:59:40 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/06 20:42:46 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
-void	free_all_stack(t_list *stack)
+void	swap_num_bonus(t_list **lst)
 {
-	t_list	*data;
+	int	swap;
 
-	while (stack)
-	{
-		data = stack;
-		stack = stack->next;
-		free(data);
-	}
+	if (ft_lstsize(*lst) <= 1)
+		return ;
+	swap = (*lst)->content;
+	(*lst)->content = (*lst)->next->content;
+	(*lst)->next->content = swap;
 }
 
-void	free_data(char **s)
+void	sa_bonus(t_list **src)
 {
-	int	i;
+	swap_num_bonus(src);
+}
 
-	i = -1;
-	while (*(s + (++i)))
-	{
-		free(*(s + i));
-	}
-	free(s);
+void	sb_bonus(t_list **dest)
+{
+	swap_num_bonus(dest);
+}
+
+void	ss_bonus(t_list **src, t_list **dest)
+{
+	swap_num_bonus(src);
+	swap_num_bonus(dest);
 }
