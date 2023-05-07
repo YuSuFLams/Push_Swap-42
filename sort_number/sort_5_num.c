@@ -16,7 +16,7 @@ void	sort_5(t_list **src, t_list **dest)
 {
 	int	pos_min;
 
-	pos_min = get_min_num(*src);;
+	pos_min = get_pmin_num(*src);;
 	while (ft_lstsize(*src) > 3)
 	{
 		if (test_integer(*src) && (!*dest))
@@ -27,7 +27,7 @@ void	sort_5(t_list **src, t_list **dest)
 			ra(src);
 		else if (pos_min > 2)
 			rra(src);
-		pos_min = get_min_num(*src);
+		pos_min = get_pmin_num(*src);
 	}
 	sort_3(src);
 	while (*dest)
