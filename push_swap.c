@@ -17,7 +17,7 @@ int	main(int ac, char **str)
 	t_list	*stack_a;
 	t_list	*stack_b;
 	char	**s;
-	int 	d;
+	// int 	d;
 
 	if (ac > 1)
 	{
