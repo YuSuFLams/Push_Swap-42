@@ -70,7 +70,7 @@ int 	set_size_arg(char **s);
 void    push_stack(t_list **stack_a, char **s);
 bool	test_integer(t_list *stack_a);
 int 	get_pmin_num(t_list *list);
-t_list	*get_small_num(t_list *stack);
+int		get_small_num(t_list *stack);
 
 //check_error
 void	free_all_stack(t_list *stack);
