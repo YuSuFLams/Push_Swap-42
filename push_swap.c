@@ -17,7 +17,7 @@ int	main(int ac, char **str)
 	t_list	*stack_a;
 	t_list	*stack_b;
 	char	**s;
-	// int 	d;
+	t_list	*d;
 
 	if (ac > 1)
 	{
@@ -34,8 +34,10 @@ int	main(int ac, char **str)
 			sort_4(&stack_a, &stack_b);
 		else if (ft_lstsize(stack_a) == 5)
 			sort_5(&stack_a, &stack_b);
-		// d = get_small_num(stack_a);
-		// printf("%d\n", d);
+		// else if (ft_lstsize(stack_a) > 5)
+		// 	sort_x(&stack_a, &stack_b);
+		d = get_small_num(stack_a);
+		printf("%d\n", d->content);
 		
 		// while(stack_a)
 		// {

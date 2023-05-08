@@ -70,7 +70,7 @@ int 	set_size_arg(char **s);
 void    push_stack(t_list **stack_a, char **s);
 bool	test_integer(t_list *stack_a);
 int 	get_pmin_num(t_list *list);
-int		get_small_num(t_list *stack);
+t_list	*get_small_num(t_list *stack);
 
 //check_error
 void	free_all_stack(t_list *stack);
@@ -105,6 +105,7 @@ void	sort_2(t_list **src);
 void	sort_3(t_list **src);
 void	sort_4(t_list **src, t_list **dest);
 void	sort_5(t_list **src, t_list **dest);
+void	sort_x(t_list **src, t_list **dest);
 
 //Bonus
 bool	test_input(t_list **src, t_list **dest, char *s);

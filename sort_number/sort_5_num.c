@@ -29,7 +29,5 @@ void	sort_5(t_list **src, t_list **dest)
 			rra(src);
 		pos_min = get_pmin_num(*src);
 	}
-	sort_3(src);
-	while (*dest)
-		pa(dest, src);
+	sort_4(src, dest);
 }

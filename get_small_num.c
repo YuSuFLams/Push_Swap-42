@@ -12,21 +12,16 @@
 
 #include "push_swap.h"
 
-int	get_small_num(t_list *stack)
+t_list	*get_small_num(t_list *stack)
 {
-	int	min;
+	t_list	*min;
 
-	min = stack->content;
+	min = stack;
 	while (stack)
 	{
-		if (stack->content < min)
-			min = stack->content;
+		if (stack->content < min->content)
+			min = stack;
 		stack = stack->next;
 	}
 	return (min);
 }
-
-// void move_small_in_tup(t_list *stack)
-// {
-
-// }
