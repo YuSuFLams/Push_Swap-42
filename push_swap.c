@@ -11,6 +11,24 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
+		
+void sot_number(t_list *stack_a, t_list *stack_b)
+{
+	if (!test_integer(stack_a))
+	{
+		if (ft_lstsize(stack_a) == 2)
+			sort_2(&stack_a);
+		else if (ft_lstsize(stack_a) == 3)
+			sort_3(&stack_a);
+		else if (ft_lstsize(stack_a) == 4)
+			sort_4(&stack_a, &stack_b);
+		else if (ft_lstsize(stack_a) == 5)
+			sort_5(&stack_a, &stack_b);
+		else if (ft_lstsize(stack_a) > 5)
+			sort_x(&stack_a, &stack_b);
+	}
+	free_stacks(&stack_a, &stack_b);
+}
 
 int	main(int ac, char **str)
 {
@@ -23,23 +41,8 @@ int	main(int ac, char **str)
 		stack_a = NULL;
 		stack_b = NULL;
 		s = split_all_arg(str + 1, ac - 1);
-		if (test_integer(stack_a))
-		{
-			free_all_stack(stack_a);
-			exit(EXIT_SUCCESS);
-		}
 		push_stack(&stack_a, s);
-		if (ft_lstsize(stack_a) == 2)
-			sort_2(&stack_a);
-		else if (ft_lstsize(stack_a) == 3)
-			sort_3(&stack_a);
-		else if (ft_lstsize(stack_a) == 4)
-			sort_4(&stack_a, &stack_b);
-		else if (ft_lstsize(stack_a) == 5)
-			sort_5(&stack_a, &stack_b);
-		else if (ft_lstsize(stack_a) > 5)
-			sort_x(&stack_a, &stack_b);
-		free_stacks(&stack_a, &stack_b);
+		sot_number(stack_a, stack_b);
 		free_data(s);
 	}
 	return (0);

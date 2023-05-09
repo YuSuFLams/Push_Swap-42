@@ -108,6 +108,7 @@ void	sort_3(t_list **src);
 void	sort_4(t_list **src, t_list **dest);
 void	sort_5(t_list **src, t_list **dest);
 void	sort_x(t_list **src, t_list **dest);
+void	sot_number(t_list *stack_a, t_list *stack_b);
 
 //Bonus
 bool	test_input(t_list **src, t_list **dest, char *s);
