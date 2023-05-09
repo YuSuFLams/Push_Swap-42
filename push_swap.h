@@ -74,6 +74,7 @@ bool	test_int(long num);
 void	int_min_max(char **s, int ac);
 
 //check_error
+void	free_stacks(t_list **a, t_list **b);
 void	free_all_stack(t_list *stack);
 void	free_data(char **s);
 void	ft_error(void);

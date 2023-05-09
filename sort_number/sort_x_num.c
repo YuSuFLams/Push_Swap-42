@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 01:32:14 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/08 23:58:56 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/09 03:17:05 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,11 @@
 
 void sort_x(t_list **src, t_list **dest)
 {
-	int p_min;
+	int size;
 
-	p_min = get_pmin_num(*src);
-	while (ft_lstsize(*src) > 5)
-	{
-		if (test_integer(*src) && (!*dest))
-			return ;
-		if (p_min == 0)
-			pb(src, dest);
-		else if (p_min <= (ft_lstsize(*src) / 2))
-				ra(src);
-		else if (p_min > (ft_lstsize(*src) / 2))
-			rra(src);
-		p_min = get_pmin_num(*src); 
-	}
-	sort_5(src, dest);
+	size = ft_lstsize(*src);
+	if (size <= 250)
+		;
+	else
+		;
 }

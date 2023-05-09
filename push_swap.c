@@ -39,7 +39,7 @@ int	main(int ac, char **str)
 			sort_5(&stack_a, &stack_b);
 		else if (ft_lstsize(stack_a) > 5)
 			sort_x(&stack_a, &stack_b);
-		free_all_stack(stack_a);
+		free_stacks(&stack_a, &stack_b);
 		free_data(s);
 	}
 	return (0);
