@@ -29,7 +29,7 @@ char	*get_strchr(char *s, int c)
 	if (!s)
 		return (s);
 	if ((unsigned char )c == 0)
-		return ((char *)s + ft_strlen(s));
+		return ((char *)s + get_strlen(s));
 	i = -1;
 	while (*(s + (++i)))
 		if (*(unsigned char *)(s + i) == (unsigned char)c)

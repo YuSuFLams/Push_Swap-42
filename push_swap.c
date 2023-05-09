@@ -22,8 +22,12 @@ int	main(int ac, char **str)
 	{
 		stack_a = NULL;
 		stack_b = NULL;
-		int_min_max(str + 1, ac - 1);
 		s = split_all_arg(str + 1, ac - 1);
+		if (test_integer(stack_a))
+		{
+			free_all_stack(stack_a);
+			exit(EXIT_SUCCESS);
+		}
 		push_stack(&stack_a, s);
 		if (ft_lstsize(stack_a) == 2)
 			sort_2(&stack_a);
@@ -33,10 +37,11 @@ int	main(int ac, char **str)
 			sort_4(&stack_a, &stack_b);
 		else if (ft_lstsize(stack_a) == 5)
 			sort_5(&stack_a, &stack_b);
-		// else if (ft_lstsize(stack_a) > 5)
-		// 	sort_x(&stack_a, &stack_b);
+		else if (ft_lstsize(stack_a) > 5)
+			sort_x(&stack_a, &stack_b);
 		free_all_stack(stack_a);
 		free_data(s);
 	}
 	return (0);
 }
+ 

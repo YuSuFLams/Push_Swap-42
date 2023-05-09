@@ -12,9 +12,9 @@
 
 #include "../../push_swap.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-	long	int	n;
+	long long	n;
 	int			sign;
 
 	n = 0;
@@ -29,7 +29,5 @@ int	ft_atoi(const char *str)
 	}
 	while (*str && *str >= '0' && *str <= '9')
 		n = n * 10 + *str++ - '0'; 
-	if (n * sign < INT_MIN || n * sign > INT_MAX)
-		ft_error();
-	return ((int )n * sign);
+	return (n * sign);
 }

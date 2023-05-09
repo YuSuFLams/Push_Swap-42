@@ -33,8 +33,7 @@ void	push_stack(t_list **stack_a, char **s)
 	len = set_size_arg(s);
 	check_duplicate(s, len);
 	check_number(s, len);
+	int_min_max(s, len);
 	while (len)
 		ft_lstadd_front(stack_a, ft_lstnew(ft_atoi(s[--len])));
-	if (test_integer(*stack_a))
-		exit(EXIT_SUCCESS);
 }

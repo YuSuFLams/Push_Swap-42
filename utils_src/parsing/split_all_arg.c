@@ -42,15 +42,22 @@ char	**split_all_arg(char **str, int ac)
 	return (split);
 }
 
-void	int_min_max(char **str, int ac)
+bool	test_int(long num)
 {
-	char	**s;
-	char	*tmp;
+	return (num >= INT_MIN && num <= INT_MAX);
+}
+
+void	int_min_max(char **s, int ac)
+{
 	int		i;
 
-	tmp = strjoin_all_arg(str, ac);
-	s = split_all_arg(str, ac);
 	i = -1;
-	while ((++i) < count(tmp, ' '))
-		ft_atoi(s[i]);
+	while (++i < ac)
+	{
+		if (!test_int(ft_atoi(s[i])))
+		{
+			free_data(s);
+			ft_error();
+		}
+	}
 }

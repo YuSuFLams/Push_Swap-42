@@ -19,6 +19,7 @@ void	push_stack_bonus(t_list **stack_a, char **s)
 	len = set_size_arg(s);
 	check_duplicate(s, len);
 	check_number(s, len);
+	int_min_max(s, len);
 	while (len)
 		ft_lstadd_front(stack_a, ft_lstnew(ft_atoi(s[--len])));
 }
@@ -60,7 +61,10 @@ void	checker(t_list **src, t_list **dest)
 	while (s)
 	{
 		if (!test_input(src, dest, s))
+		{
+			free_all_stack(*src);
 			ft_error();
+		}
 		free(s);
 		s = get_next_line(0);
 	}
@@ -81,7 +85,6 @@ int	main(int ac, char **str)
     stack_b = NULL;
 	if (ac == 1)
 		return (0);
-	int_min_max(str + 1, ac - 1);
 	s = split_all_arg(str + 1, ac - 1);
 	push_stack_bonus(&stack_a, s);
 	checker(&stack_a, &stack_b);

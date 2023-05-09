@@ -38,7 +38,10 @@ void	check_number(char **str, int ac)
 	while (i < ac)
 	{
 		if (!str[i][0] || !is_num(str[i]))
+		{
+			free_data(str);
 			ft_error();
+		}
 		i++;
 	}
 }

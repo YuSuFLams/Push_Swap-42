@@ -42,7 +42,7 @@ char	*set_next_line(char *line);
 char	*get_next_line(int fd);
 
 //src_libft
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 size_t	ft_strlen(const char *s);
 void	ft_putchar(char c);
 void	ft_putstr(char *s);
@@ -65,12 +65,13 @@ int 	is_num(char *s);
 void	check_number(char **str, int ac);
 char	*strjoin_all_arg(char **str, int ac);
 char	**split_all_arg(char **str, int ac);
-void	int_min_max(char **str, int ac);
 int 	set_size_arg(char **s);
 void    push_stack(t_list **stack_a, char **s);
 bool	test_integer(t_list *stack_a);
 int 	get_pmin_num(t_list *list);
 int		get_small_num(t_list *stack);
+bool	test_int(long num);
+void	int_min_max(char **s, int ac);
 
 //check_error
 void	free_all_stack(t_list *stack);
