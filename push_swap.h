@@ -70,6 +70,7 @@ int		set_size_arg(char **s);
 void	push_stack(t_list **stack_a, char **s);
 bool	test_integer(t_list *stack_a);
 int		get_pmin_num(t_list *list);
+int		get_pmax_num(t_list *list);
 int		get_small_num(t_list *stack);
 int		get_bigg_num(t_list *stack);
 bool	test_int(long num);

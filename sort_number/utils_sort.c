@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 21:20:10 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/10 21:20:19 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/10 23:02:42 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,27 @@ void get_index(t_list *stack)
         }
         data = data->next;
     }
+}
+
+
+int	get_pmax_num(t_list *list)
+{
+	int	max;
+	int	i;
+	int	pos;
+
+	max = list->content;
+	i = 0;
+	pos = 0;
+	while (list)
+	{
+		if (list->content > max)
+		{
+			pos = i;
+			max = list->content;
+		}
+		i++;
+		list = list->next;
+	}
+	return (pos);
 }
