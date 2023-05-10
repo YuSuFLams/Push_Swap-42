@@ -55,9 +55,6 @@ void	int_min_max(char **s, int ac)
 	while (++i < ac)
 	{
 		if (!test_int(ft_atoi(s[i])))
-		{
-			free_data(s);
 			ft_error();
-		}
 	}
 }

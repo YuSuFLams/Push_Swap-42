@@ -27,27 +27,27 @@ void	push_stack_bonus(t_list **stack_a, char **s)
 bool	test_input(t_list **src, t_list **dest, char *s)
 {
 	if (!ft_strcmp(s, "sa\n"))
-		return(sa_bonus(src), true);
+		return (sa_bonus(src), true);
 	else if (!ft_strcmp(s, "sb\n"))
-		return(sb_bonus(dest), true);
+		return (sb_bonus(dest), true);
 	else if (!ft_strcmp(s, "ss\n"))
-		return(ss_bonus(src, dest), true);
+		return (ss_bonus(src, dest), true);
 	else if (!ft_strcmp(s, "pa\n"))
-		return(pa_bonus(dest, src), true);
+		return (pa_bonus(dest, src), true);
 	else if (!ft_strcmp(s, "pb\n"))
-		return(pb_bonus(src, dest), true);
+		return (pb_bonus(src, dest), true);
 	else if (!ft_strcmp(s, "ra\n"))
-		return(ra_bonus(src), true);
+		return (ra_bonus(src), true);
 	else if (!ft_strcmp(s, "rb\n"))
-		return(rb_bonus(dest), true);
+		return (rb_bonus(dest), true);
 	else if (!ft_strcmp(s, "rr\n"))
-		return(rr_bonus(src, dest), true);
+		return (rr_bonus(src, dest), true);
 	else if (!ft_strcmp(s, "rra\n"))
-		return(rra_bonus(src), true);
+		return (rra_bonus(src), true);
 	else if (!ft_strcmp(s, "rrb\n"))
-		return(rrb_bonus(dest), true);
+		return (rrb_bonus(dest), true);
 	else if (!ft_strcmp(s, "rrr\n"))
-		return(rrr_bonus(src, dest), true);
+		return (rrr_bonus(src, dest), true);
 	else
 		return (false);
 	return (false);
@@ -81,8 +81,8 @@ int	main(int ac, char **str)
 	t_list	*stack_b;
 	char	**s;
 
-    stack_a = NULL;
-    stack_b = NULL;
+	stack_a = NULL;
+	stack_b = NULL;
 	if (ac == 1)
 		return (0);
 	s = split_all_arg(str + 1, ac - 1);
@@ -92,4 +92,3 @@ int	main(int ac, char **str)
 	free_data(s);
 	return (0);
 }
-

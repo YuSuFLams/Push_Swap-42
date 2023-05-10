@@ -51,7 +51,7 @@ char	*get_strjoin(char *s1, char *s2)
 		s1[0] = '\0';
 	}
 	if (!s2)
-		return (free(s1),s2);
+		return (free(s1), s2);
 	str = (char *)malloc(get_strlen(s1) + get_strlen(s2) + 1 * sizeof(char));
 	if (!str)
 		return (str);

@@ -14,7 +14,7 @@
 
 void	sort_2(t_list **src)
 {
-	t_list *num;
+	t_list	*num;
 
 	num = *src;
 	if (num->content > num->next->content)

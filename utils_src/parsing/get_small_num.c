@@ -12,9 +12,9 @@
 
 #include "../../push_swap.h"
 
-int get_small_num(t_list *stack)
+int	get_small_num(t_list *stack)
 {
-	int min;
+	int	min;
 
 	min = stack->content;
 	while (stack)

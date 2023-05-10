@@ -6,19 +6,15 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 01:32:14 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/09 21:55:10 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:34:58 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void sort_x(t_list **src, t_list **dest)
+void	sort_x(t_list **src, t_list **dest)
 {
-	int size;
+	int	size;
 
 	size = ft_lstsize(*src);
-	if (size <= 250)
-		;
-	else
-		;
 }

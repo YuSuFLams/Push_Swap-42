@@ -24,7 +24,7 @@ void	free_all_stack(t_list *stack)
 	}
 }
 
-void free_stacks(t_list **a, t_list **b)
+void	free_stacks(t_list **a, t_list **b)
 {
 	free_all_stack(*a);
 	free_all_stack(*b);

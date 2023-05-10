@@ -22,8 +22,8 @@
 
 typedef struct s_list
 {
-	int 			content;
-	int 			pos;
+	int				content;
+	int				pos;
 	struct s_list	*next;
 }				t_list;
 
@@ -56,20 +56,21 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstnew(int	content);
+t_list	*ft_lstnew(int content);
 int		ft_lstsize(t_list *lst);
 
 //push_swap_fonction
 void	check_duplicate(char **s, int ac);
-int 	is_num(char *s);
+int		is_num(char *s);
 void	check_number(char **str, int ac);
 char	*strjoin_all_arg(char **str, int ac);
 char	**split_all_arg(char **str, int ac);
-int 	set_size_arg(char **s);
-void    push_stack(t_list **stack_a, char **s);
+int		set_size_arg(char **s);
+void	push_stack(t_list **stack_a, char **s);
 bool	test_integer(t_list *stack_a);
-int 	get_pmin_num(t_list *list);
+int		get_pmin_num(t_list *list);
 int		get_small_num(t_list *stack);
+int		get_bigg_num(t_list *stack);
 bool	test_int(long num);
 void	int_min_max(char **s, int ac);
 
@@ -108,7 +109,7 @@ void	sort_3(t_list **src);
 void	sort_4(t_list **src, t_list **dest);
 void	sort_5(t_list **src, t_list **dest);
 void	sort_x(t_list **src, t_list **dest);
-void	sot_number(t_list *stack_a, t_list *stack_b);
+void	set_number(t_list **stack_a, t_list **stack_b);
 
 //Bonus
 bool	test_input(t_list **src, t_list **dest, char *s);

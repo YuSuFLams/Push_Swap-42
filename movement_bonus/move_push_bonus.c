@@ -14,7 +14,7 @@
 
 void	push_num_bonus(t_list **src, t_list **dest)
 {
-	t_list *push;
+	t_list	*push;
 
 	if (!ft_lstsize(*src))
 		return ;
@@ -26,10 +26,10 @@ void	push_num_bonus(t_list **src, t_list **dest)
 
 void	pa_bonus(t_list **stack_b, t_list **stack_a)
 {
-	push_num_bonus(stack_b, stack_a);  
+	push_num_bonus(stack_b, stack_a);
 }
 
 void	pb_bonus(t_list **stack_a, t_list **stack_b)
 {
-	push_num_bonus(stack_a, stack_b);  
+	push_num_bonus(stack_a, stack_b);
 }

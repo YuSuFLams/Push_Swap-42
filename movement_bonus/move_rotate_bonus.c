@@ -14,8 +14,8 @@
 
 void	rotate_num_bonus(t_list **lst)
 {
-	t_list *rotate;
-	t_list *tmp;
+	t_list	*rotate;
+	t_list	*tmp;
 
 	if (ft_lstsize(*lst) <= 1)
 		return ;

@@ -24,10 +24,7 @@ void	check_duplicate(char **s, int ac)
 		while (j < ac)
 		{
 			if (ft_atoi(s[i]) == ft_atoi(s[j]))
-			{
-				free_data(s);
 				ft_error();
-			}
 			j++;
 		}
 	}

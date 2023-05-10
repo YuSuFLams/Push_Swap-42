@@ -41,7 +41,6 @@ void	freesplit(char **s, int i)
 	free(s);
 }
 
-
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
