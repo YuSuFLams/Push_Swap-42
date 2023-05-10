@@ -24,8 +24,8 @@ void	set_number(t_list **stack_a, t_list **stack_b)
 			sort_4(stack_a, stack_b);
 		else if (ft_lstsize(*stack_a) == 5)
 			sort_5(stack_a, stack_b);
-		else if (ft_lstsize(*stack_a) > 5)
-			sort_x(stack_a, stack_b);
+		// else if (ft_lstsize(*stack_a) > 5)
+		// 	sort_x(stack_a, stack_b);
 	}
 	free_stacks(stack_a, stack_b);
 }
@@ -33,16 +33,22 @@ void	set_number(t_list **stack_a, t_list **stack_b)
 int	main(int ac, char **str)
 {
 	t_list	*stack_a;
-	t_list	*stack_b;
+	// t_list	*stack_b;
 	char	**s;
 
 	if (ac > 1)
 	{
 		stack_a = NULL;
-		stack_b = NULL;
+		// stack_b = NULL;
 		s = split_all_arg(str + 1, ac - 1);
 		push_stack(&stack_a, s);
-		set_number(&stack_a, &stack_b);
+		// set_number(&stack_a, &stack_b);
+		get_index(stack_a);
+		while (stack_a)
+		{
+			printf("number %d\t : %d\n",stack_a->content, stack_a->pos);
+			stack_a = stack_a->next;
+		}
 	}
 	return (0);
 }
