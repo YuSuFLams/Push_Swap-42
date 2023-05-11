@@ -26,7 +26,6 @@ void	set_number(t_list **stack_a, t_list **stack_b)
 			sort_5(stack_a, stack_b);
 		else if (ft_lstsize(*stack_a) > 5)
 			sort_x(stack_a, stack_b);
-		// free_stacks(stack_a, stack_b);
 	}
 }
 
@@ -42,20 +41,14 @@ int	main(int ac, char **str)
 		stack_b = NULL;
 		s = split_all_arg(str + 1, ac - 1);
 		push_stack(&stack_a, s);
-		set_number(&stack_a, &stack_b);
 		get_index(stack_a);
-		// while (stack_a)
-		// {
-		// 	printf("number %d\t : %d\n",stack_a->content, stack_a->pos);
-		// 	free(stack_a);
-		// 	stack_a = stack_a->next;
-		// }
+		set_number(&stack_a, &stack_b);
 		// while (stack_a)
 		// {
 		// 	printf("%d\n",stack_a->content);
-		// 	free(stack_a);
 		// 	stack_a = stack_a->next;
 		// }
+		free_stacks(&stack_a, &stack_b);
 		// while (1);
 	}
 	return (0);
