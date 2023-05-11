@@ -24,8 +24,8 @@ void	set_number(t_list **stack_a, t_list **stack_b)
 			sort_4(stack_a, stack_b);
 		else if (ft_lstsize(*stack_a) == 5)
 			sort_5(stack_a, stack_b);
-		// else if (ft_lstsize(*stack_a) > 5)
-		// 	sort_x(stack_a, stack_b);
+		else if (ft_lstsize(*stack_a) > 5)
+			sort_x(stack_a, stack_b);
 		// free_stacks(stack_a, stack_b);
 	}
 }

@@ -6,50 +6,65 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 01:32:14 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/10 23:49:15 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/11 18:41:51 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	push_to_stack_b(t_list **src, t_list **dest, int chunk, int div)
+void	push_to_stack_b(t_list **src, t_list **dest, int chunk, int move)
 {
-	
-}
-
-void push_stack_b_to_a(t_list **dest, t_list **src)
-{
-	int	pos_max;
-
-	pos_max = get_pmax_num(*dest);
-	while (ft_lstsize(*dest) > 0)
+	while (*src && chunk > 0)
 	{
-		if (test_integer(*dest) && (!*dest))
-			return ;
-		if (pos_max == 0)
-			pa(dest, src);
-		else if (pos_max <= ft_lstsize(*dest) / 2)
-			rb(dest);
-		else if (pos_max > ft_lstsize(*dest) / 2)
-			rrb(dest);
-		pos_max = get_pmax_num(*dest);
+		if ((*src)->pos < move)
+		{
+			if ((*src)->pos < move - (chunk / 2))
+				pb(src, dest);
+			else
+			{
+				pb(src, dest);
+				rb(dest);
+			}
+			chunk--;
+		}
+		else
+			ra(src);
 	}
 }
+
+// void push_to_stack_a(t_list **dest, t_list **src)
+// {
+// 	int	pos_max;
+
+// 	pos_max = get_pmax_num(*dest);
+// 	while (ft_lstsize(*dest) > 0)
+// 	{
+// 		if (test_integer(*dest) && (!*dest))
+// 			return ;
+// 		if (pos_max == 0)
+// 			pa(dest, src);
+// 		else if (pos_max <= ft_lstsize(*dest) / 2)
+// 			rb(dest);
+// 		else if (pos_max > ft_lstsize(*dest) / 2)
+// 			rrb(dest);
+// 		pos_max = get_pmax_num(*dest);
+// 	}
+// }
 
 void	sort_x(t_list **src, t_list **dest)
 {
 	int	move;
     int chunk;
 
-	if (ft_lstsize(*src) > 5 && ft_lstsize(*src) <= 250)
+	if (ft_lstsize(*src) > 5 && ft_lstsize(*src) <= 100)
 		chunk = ft_lstsize(*src) / 5;
-	if (ft_lstsize(*src) > 250)
+	if (ft_lstsize(*src) > 100)
 		chunk = ft_lstsize(*src) / 12;
 	move = chunk;
-	while (*src)
+	while (ft_lstsize(*src))
     {
 		push_to_stack_b(src, dest, chunk, move);
 		move += chunk;
 	}
-	push_stack_b_to_a(dest, src);
+	// push_to_stack_a(dest, src);
 }
