@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 01:32:14 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/12 02:07:32 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/12 15:33:53 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	push_to_stack_b(t_list **src, t_list **dest, int chunk, int move)
 	{
 		if ((*src)->pos <= move)
 		{
-			if ((*src)->pos > move - (chunk / 2))
+			if ((*src)->pos < move - (chunk / 2))
 				pb(src, dest);
 			else
 			{
@@ -61,10 +61,10 @@ void	sort_x(t_list **src, t_list **dest)
 	int	move;
 	int	chunk;
 
-	if (ft_lstsize(*src) > 5 && ft_lstsize(*src) <= 100)
+	if (ft_lstsize(*src) > 5 && ft_lstsize(*src) <= 250)
 		chunk = ft_lstsize(*src) / 5;
-	if (ft_lstsize(*src) > 100)
-		chunk = ft_lstsize(*src) / 10;
+	if (ft_lstsize(*src) > 250)
+		chunk = ft_lstsize(*src) / 9;
 	move = chunk;
 	while (ft_lstsize(*src))
 	{
