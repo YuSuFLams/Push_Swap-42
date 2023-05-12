@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 01:32:14 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/11 20:59:28 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/12 02:07:32 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	push_to_stack_b(t_list **src, t_list **dest, int chunk, int move)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (*src && i < chunk)
 	{
@@ -35,10 +35,9 @@ void	push_to_stack_b(t_list **src, t_list **dest, int chunk, int move)
 	}
 }
 
-void push_to_stack_a(t_list **dest, t_list **src)
+void	push_to_stack_a(t_list **dest, t_list **src)
 {
 	int	pos_max;
-	// int i;
 
 	pos_max = get_pmax_num(*dest);
 	while (ft_lstsize(*dest) > 2)
@@ -51,24 +50,24 @@ void push_to_stack_a(t_list **dest, t_list **src)
 			rrb(dest);
 		pos_max = get_pmax_num(*dest);
 	}
-	sort_2(dest);
-	rb(dest);
-	while (*(dest))
+	if ((*dest)->content < (*dest)->next->content)
+		sb(src);
+	while (*dest)
 		pa(dest, src);
 }
 
 void	sort_x(t_list **src, t_list **dest)
 {
 	int	move;
-    int chunk;
+	int	chunk;
 
 	if (ft_lstsize(*src) > 5 && ft_lstsize(*src) <= 100)
 		chunk = ft_lstsize(*src) / 5;
 	if (ft_lstsize(*src) > 100)
-		chunk = ft_lstsize(*src) / 9;
+		chunk = ft_lstsize(*src) / 10;
 	move = chunk;
 	while (ft_lstsize(*src))
-    {
+	{
 		push_to_stack_b(src, dest, chunk, move);
 		move += chunk;
 	}

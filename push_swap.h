@@ -141,11 +141,10 @@ void	rra_bonus(t_list **src);
 void	reverse_num_bonus(t_list **lst);
 void	push_stack_bonus(t_list **stack_a, char **s);
 
-
 //Utils_sort
 void	_index(t_list *stack);
 void	get_index(t_list *stack);
 void	push_to_stack_b(t_list **src, t_list **dest, int chunk, int move);
-void 	push_to_stack_a(t_list **dest, t_list **src);
+void	push_to_stack_a(t_list **dest, t_list **src);
 
 #endif

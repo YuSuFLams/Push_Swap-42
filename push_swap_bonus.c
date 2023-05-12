@@ -89,6 +89,5 @@ int	main(int ac, char **str)
 	push_stack_bonus(&stack_a, s);
 	checker(&stack_a, &stack_b);
 	free_all_stack(stack_a);
-	free_data(s);
 	return (0);
 }

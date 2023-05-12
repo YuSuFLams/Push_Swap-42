@@ -43,13 +43,7 @@ int	main(int ac, char **str)
 		push_stack(&stack_a, s);
 		get_index(stack_a);
 		set_number(&stack_a, &stack_b);
-		// while (stack_a)
-		// {
-		// 	printf("%d\n",stack_a->content);
-		// 	stack_a = stack_a->next;
-		// }
 		free_stacks(&stack_a, &stack_b);
-		// while (1);
 	}
 	return (0);
 }
