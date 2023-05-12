@@ -23,7 +23,6 @@
 typedef struct s_list
 {
 	int				content;
-	int				index;
 	int				pos;
 	struct s_list	*next;
 }				t_list;
@@ -105,6 +104,12 @@ void	rrb(t_list **dest);
 void	rra(t_list **src);
 void	reverse_num(t_list **lst);
 
+//Utils_sort
+void	_index(t_list *stack);
+void	get_index(t_list *stack);
+void	push_to_stack_b(t_list **src, t_list **dest, int chunk, int move);
+void	push_to_stack_a(t_list **dest, t_list **src);
+
 //move_sort
 void	sort_2(t_list **src);
 void	sort_3(t_list **src);
@@ -140,11 +145,5 @@ void	rrb_bonus(t_list **dest);
 void	rra_bonus(t_list **src);
 void	reverse_num_bonus(t_list **lst);
 void	push_stack_bonus(t_list **stack_a, char **s);
-
-//Utils_sort
-void	_index(t_list *stack);
-void	get_index(t_list *stack);
-void	push_to_stack_b(t_list **src, t_list **dest, int chunk, int move);
-void	push_to_stack_a(t_list **dest, t_list **src);
 
 #endif
