@@ -17,7 +17,7 @@ void	sort_5(t_list **src, t_list **dest)
 	int	pos_min;
 
 	pos_min = get_pmin_num(*src);
-	while (ft_lstsize(*src) > 3)
+	while (ft_lstsize(*src) > 4)
 	{
 		if (test_integer(*src) && (!*dest))
 			return ;

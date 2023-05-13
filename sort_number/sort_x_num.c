@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 01:32:14 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/12 19:26:53 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/13 20:47:46 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	push_to_stack_a(t_list **dest, t_list **src)
 	int	pos_max;
 
 	pos_max = get_pmax_num(*dest);
-	while (ft_lstsize(*dest) > 2)
+	while (ft_lstsize(*dest) > 1)
 	{
 		if (pos_max == 0)
 			pa(dest, src);
@@ -50,10 +50,7 @@ void	push_to_stack_a(t_list **dest, t_list **src)
 			rrb(dest);
 		pos_max = get_pmax_num(*dest);
 	}
-	if ((*dest)->content < (*dest)->next->content)
-		sb(src);
-	while (*dest)
-		pa(dest, src);
+	pa(dest, src);
 }
 
 void	sort_x(t_list **src, t_list **dest)
@@ -61,9 +58,9 @@ void	sort_x(t_list **src, t_list **dest)
 	int	move;
 	int	chunk;
 
-	if (ft_lstsize(*src) > 5 && ft_lstsize(*src) <= 250)
+	if (ft_lstsize(*src) > 5 && ft_lstsize(*src) <= 200)
 		chunk = ft_lstsize(*src) / 5;
-	if (ft_lstsize(*src) > 250)
+	if (ft_lstsize(*src) > 200)
 		chunk = ft_lstsize(*src) / 11;
 	move = chunk;
 	while (ft_lstsize(*src))

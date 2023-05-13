@@ -17,8 +17,8 @@ void	check_duplicate(char **s, int ac)
 	int	i;
 	int	j;
 
-	i = -1;
-	while ((++i) < ac - 1)
+	i = 0;
+	while (i < ac)
 	{
 		j = i + 1;
 		while (j < ac)
@@ -27,5 +27,6 @@ void	check_duplicate(char **s, int ac)
 				ft_error();
 			j++;
 		}
+		i++;
 	}
 }

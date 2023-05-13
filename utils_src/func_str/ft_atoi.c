@@ -30,7 +30,9 @@ int	ft_atoi(const char *str)
 	while (*str && *str >= '0' && *str <= '9')
 	{
 		n = n * 10 + *str++ - '0';
-		if (n < INT_MIN || n > INT_MAX)
+		if (n > 2147483647 && sign == 1)
+			ft_error();
+		else if (n > 2147483648 && sign == -1)
 			ft_error();
 	}
 	return (n * sign);
