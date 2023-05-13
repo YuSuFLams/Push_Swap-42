@@ -27,6 +27,7 @@ void	set_number(t_list **stack_a, t_list **stack_b)
 		else if (ft_lstsize(*stack_a) > 5)
 			sort_x(stack_a, stack_b);
 	}
+	free_stacks(stack_a, stack_b);
 }
 
 int	main(int ac, char **str)
@@ -35,15 +36,15 @@ int	main(int ac, char **str)
 	t_list	*stack_b;
 	char	**s;
 
-	if (ac > 1)
-	{
-		stack_a = NULL;
-		stack_b = NULL;
-		s = split_all_arg(str + 1, ac - 1);
-		push_stack(&stack_a, s);
-		get_index(stack_a);
-		set_number(&stack_a, &stack_b);
-		free_stacks(&stack_a, &stack_b);
-	}
-	return (0);
+	if (ac == 1)
+		return (EXIT_FAILURE);
+	stack_a = NULL;
+	stack_b = NULL;
+	check_empty(str, ac);
+	s = split_all_arg(str, ac);
+	push_stack(&stack_a, s);
+	get_index(stack_a);
+	set_number(&stack_a, &stack_b);
+	free_data(s);
+	return (EXIT_SUCCESS);
 }

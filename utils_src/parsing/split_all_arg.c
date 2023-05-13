@@ -19,7 +19,7 @@ char	*strjoin_all_arg(char **str, int ac)
 	int		i;
 
 	s = ft_strdup("");
-	i = 0;
+	i = 1;
 	while (i < ac)
 	{
 		tmp = ft_strjoin(s, str[i]);
@@ -42,19 +42,25 @@ char	**split_all_arg(char **str, int ac)
 	return (split);
 }
 
-bool	test_int(long num)
+int	_isdigit(char *s)
 {
-	return (num >= INT_MIN && num <= INT_MAX);
-}
-
-void	int_min_max(char **s, int ac)
-{
-	int		i;
+	int	i;
 
 	i = -1;
-	while (++i < ac)
+	while (*(s + (++i)))
+		if (*(s + i) >= '0' && *(s + i) <= '9')
+			return (1);
+	return (0);
+}
+
+void	check_empty(char **s, int len)
+{
+	int	i;
+
+	i = 0;
+	while (++i < len)
 	{
-		if (!test_int(ft_atoi(s[i])))
+		if (!_isdigit(s[i]))
 			ft_error();
 	}
 }
