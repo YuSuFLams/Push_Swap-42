@@ -141,6 +141,5 @@ void	rrr_bonus(t_list **src, t_list **dest);
 void	rrb_bonus(t_list **dest);
 void	rra_bonus(t_list **src);
 void	reverse_num_bonus(t_list **lst);
-void	push_stack_bonus(t_list **stack_a, char **s);
 
 #endif

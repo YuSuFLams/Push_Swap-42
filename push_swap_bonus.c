@@ -12,17 +12,6 @@
 
 #include "push_swap.h"
 
-void	push_stack_bonus(t_list **stack_a, char **s)
-{
-	int	len;
-
-	len = set_size_arg(s);
-	check_duplicate(s, len);
-	check_number(s, len);
-	while (len)
-		ft_lstadd_front(stack_a, ft_lstnew(ft_atoi(s[--len])));
-}
-
 bool	test_input(t_list **src, t_list **dest, char *s)
 {
 	if (!ft_strcmp(s, "sa\n"))
@@ -60,10 +49,7 @@ void	checker(t_list **src, t_list **dest)
 	while (s)
 	{
 		if (!test_input(src, dest, s))
-		{
-			free_all_stack(*src);
 			ft_error();
-		}
 		free(s);
 		s = get_next_line(0);
 	}
@@ -80,15 +66,15 @@ int	main(int ac, char **str)
 	t_list	*stack_b;
 	char	**s;
 
-	stack_a = NULL;
-	stack_b = NULL;
 	if (ac == 1)
 		return (EXIT_FAILURE);
+	stack_a = NULL;
+	stack_b = NULL;
 	check_empty(str, ac);
 	s = split_all_arg(str, ac);
-	push_stack_bonus(&stack_a, s);
+	push_stack(&stack_a, s);
 	checker(&stack_a, &stack_b);
-	free_all_stack(stack_a);
+	free_stacks(&stack_a, &stack_b);
 	free_data(s);
 	return (EXIT_SUCCESS);
 }
