@@ -1,5 +1,5 @@
-NAME_M = push_swap
-NAME_B = checker_bonus
+NAME = push_swap
+B_NAME = checker_bonus
 
 C_BLUE    = \033[0;34m
 C_GREEN   = \033[0;32m
@@ -42,19 +42,19 @@ B_SRCS = movement_bonus/move_push_bonus.c movement_bonus/move_reverse_bonus.c \
 M_OBJS = ${M_SRCS:.c=.o}
 B_OBJS = ${B_SRCS:.c=.o}
 
-all: $(NAME_M)
+all: $(NAME)
 
-$(NAME_M): $(M_OBJS) $(HEADER)
-	@$(CC) $(CFLAGS)  $(M_OBJS) -o $(NAME_M)  
+$(NAME): $(M_OBJS) $(HEADER)
+	@$(CC) $(CFLAGS)  $(M_OBJS) -o $(NAME)  
 	@printf "$(C_BLUE)    - Compilation Mandatory finished!....$(C_RESET)\n"
 
 %.o: %.c $(HEADER)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: $(NAME_B)
+bonus: $(B_NAME)
 
-$(NAME_B): $(B_OBJS) $(HEADER)
-	@$(CC) $(CFLAGS)  $(B_OBJS) -o $(NAME_B)  
+$(B_NAME): $(B_OBJS) $(HEADER)
+	@$(CC) $(CFLAGS)  $(B_OBJS) -o $(B_NAME)  
 	@printf "$(C_BLUE)    - Compilation Bonus finished!....$(C_RESET)\n"
 
 clean:
@@ -62,7 +62,7 @@ clean:
 	@printf "$(C_GREEN)    - Removed Object File finished!....$(C_RESET)\n"
 
 fclean: clean
-	@$(RM)  $(NAME_M) $(NAME_B)
+	@$(RM)  $(NAME) $(B_NAME)
 	@printf "$(C_GREEN)    - Removed finished!....$(C_RESET)\n"
 
 re: fclean all
