@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 01:32:14 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/14 20:48:12 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/14 22:34:16 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	sort_x(t_list **src, t_list **dest)
 	if (ft_lstsize(*src) > 5 && ft_lstsize(*src) <= 200)
 		chunk = ft_lstsize(*src) / 5;
 	if (ft_lstsize(*src) > 200)
-		chunk = ft_lstsize(*src) / 11;
+		chunk = ft_lstsize(*src) / 9;
 	move = chunk;
 	push_to_stack_b(src, dest, chunk, move);
 	push_to_stack_a(dest, src);
