@@ -14,18 +14,23 @@
 
 void	set_number(t_list **stack_a, t_list **stack_b)
 {
+	int	size;
+
+	size = ft_lstsize(*stack_a);
 	if (!test_integer(*stack_a))
 	{
-		if (ft_lstsize(*stack_a) == 2)
+		if (size == 2)
 			sort_2(stack_a);
-		else if (ft_lstsize(*stack_a) == 3)
+		else if (size == 3)
 			sort_3(stack_a);
-		else if (ft_lstsize(*stack_a) == 4)
+		else if (size == 4)
 			sort_4(stack_a, stack_b);
-		else if (ft_lstsize(*stack_a) == 5)
+		else if (size == 5)
 			sort_5(stack_a, stack_b);
-		else if (ft_lstsize(*stack_a) > 5)
-			sort_x(stack_a, stack_b);
+		else if (size > 5 && size <= 200)
+			sort_x_100(stack_a, stack_b);
+		else if (size > 200)
+			sort_x_500(stack_a, stack_b);
 	}
 	free_stacks(stack_a, stack_b);
 }

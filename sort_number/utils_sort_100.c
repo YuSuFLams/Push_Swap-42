@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_sort.c                                       :+:      :+:    :+:   */
+/*   utils_sort_100.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 21:20:10 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/13 19:52:54 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/16 00:13:49 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,22 @@ int	get_pmax_num(t_list *list)
 		list = list->next;
 	}
 	return (pos);
+}
+
+void	push_to_stack_a(t_list **dest, t_list **src)
+{
+	int	pos_max;
+
+	pos_max = get_pmax_num(*dest);
+	while (ft_lstsize(*dest))
+	{
+		if (pos_max == 0)
+			pa(dest, src);
+		else if (pos_max <= ft_lstsize(*dest) / 2)
+			rb(dest);
+		else if (pos_max > ft_lstsize(*dest) / 2)
+			rrb(dest);
+		if (ft_lstsize(*dest))
+			pos_max = get_pmax_num(*dest);
+	}
 }

@@ -23,7 +23,7 @@ M_SRCS = movement/move_push.c movement/move_reverse.c movement/move_rotate.c mov
 	utils_src/parsing/split_all_arg.c utils_src/parsing/set_size_arg.c utils_src/parsing/push_stack.c \
 	utils_src/parsing/free_all_stack.c \
 	sort_number/sort_2_num.c sort_number/sort_3_num.c sort_number/sort_4_num.c sort_number/sort_5_num.c \
-	sort_number/sort_x_num.c sort_number/utils_sort.c \
+	sort_number/sort_x_num.c sort_number/utils_sort_100.c sort_number/utils_sort_500.c \
 	push_swap.c 
  
 B_SRCS = movement_bonus/move_push_bonus.c movement_bonus/move_reverse_bonus.c \

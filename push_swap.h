@@ -112,7 +112,8 @@ void	sort_2(t_list **src);
 void	sort_3(t_list **src);
 void	sort_4(t_list **src, t_list **dest);
 void	sort_5(t_list **src, t_list **dest);
-void	sort_x(t_list **src, t_list **dest);
+void	sort_x_100(t_list **src, t_list **dest);
+void	sort_x_500(t_list **src, t_list **dest);
 void	set_number(t_list **stack_a, t_list **stack_b);
 
 //Bonus
@@ -141,5 +142,11 @@ void	rrr_bonus(t_list **src, t_list **dest);
 void	rrb_bonus(t_list **dest);
 void	rra_bonus(t_list **src);
 void	reverse_num_bonus(t_list **lst);
+
+//utils_sort_500
+void	push_to_a(t_list **dest, t_list **src);
+void	move_to_top(t_list **dest, t_list **src, int pos);
+int		get_op_num(t_list *dest, int pos);
+int		get_pos_num(t_list *dest, int size);
 
 #endif
