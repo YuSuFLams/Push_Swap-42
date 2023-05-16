@@ -30,4 +30,5 @@ void	sort_5(t_list **src, t_list **dest)
 		pos_min = get_pmin_num(*src);
 	}
 	sort_4(src, dest);
+	pa(dest, src);
 }
