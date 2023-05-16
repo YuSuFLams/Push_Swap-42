@@ -12,28 +12,6 @@
 
 #include "../push_swap.h"
 
-int	get_pmin_num(t_list *list)
-{
-	int	min;
-	int	i;
-	int	pos;
-
-	min = list->content;
-	i = 0;
-	pos = 0;
-	while (list)
-	{
-		if (list->content < min)
-		{
-			pos = i;
-			min = list->content;
-		}
-		i++;
-		list = list->next;
-	}
-	return (pos);
-}
-
 void	sort_4(t_list **src, t_list **dest)
 {
 	int	pos_min;
