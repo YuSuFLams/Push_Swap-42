@@ -67,7 +67,7 @@ int	main(int ac, char **str)
 	char	**s;
 
 	if (ac == 1)
-		return (EXIT_FAILURE);
+		return (0);
 	stack_a = NULL;
 	stack_b = NULL;
 	check_empty(str, ac);
