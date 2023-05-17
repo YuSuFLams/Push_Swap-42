@@ -1,5 +1,5 @@
 NAME = push_swap
-B_NAME = checker_bonus
+B_NAME = checker
 
 C_BLUE    = \033[0;34m
 C_GREEN   = \033[0;32m
