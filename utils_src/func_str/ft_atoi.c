@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 
 	n = 0;
 	sign = 1;
-	while (*str == 32 && (*str >= 9 && *str <= 13))
+	while (*str == 32 || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-' || *str == '+')
 	{
